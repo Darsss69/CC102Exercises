@@ -1,3 +1,5 @@
+//Darius James M. Serito  BSCS-1B
+
 #include <iostream>
 #include <vector>
 #include <iomanip>
@@ -79,3 +81,4 @@ int main()
 
     return 0;
 }
+

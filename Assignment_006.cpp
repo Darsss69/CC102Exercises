@@ -23,22 +23,22 @@ bool isPrime(int number)
 }
 
 // Function to count prime numbers in NUMS.txt
-int primeCounter()
+int primeGetter()
 {
     fstream file;
-    int primeCount = 0;
+    int primeCounter = 0;
 
     file.open("NUMS.txt", ios::in);
 
     if(file.is_open())
     {
-        int number;
+        int num;
 
-        while(file >> number)
+        while(file >> num)
         {
-            if(isPrime(number))
+            if(isPrime(num))
             {
-                primeCount++;
+                primeCounter++;
             }
         }
 
@@ -49,7 +49,7 @@ int primeCounter()
         cout << "Failed to open NUMS.txt\n";
     }
 
-    return primeCount;
+    return primeCounter;
 }
 
 int main()
@@ -79,9 +79,9 @@ int main()
         cout << "Failed to create NUMS.txt\n";
     }
 
-    int n = primeCounter();
+    int z = primeGetter();
 
-    cout << "Amount of prime numbers in the file: " << n << endl;
+    cout << "Amount of prime numbers in the file: " << z << endl;
 
     return 0;
 }
